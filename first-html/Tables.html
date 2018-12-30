@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tables Example</title>
+    <link rel="stylesheet" href="../css/table.css">
+</head>
+<body>
+    <table>
+            <caption>My First Table</caption>
+            <tr>
+                <th colspan="3">Row Header Spanned Over 3 Cols</th>
+            </tr>
+            <tr>
+                <td id="firstCell" class=thisIsAClass>This is a cell</td>
+                <td>&nbsp;</td>
+                <td>This is another cell <strong>next</strong> To #1 Kinda</td>
+            </tr>
+            <tr>
+                <th rowspan="5" id="firstCell"><span class="thisIsAClass">Loong cell </span></th>
+            </tr>
+            <tr>
+                <td>New Cell, New Row</td>
+                <td>Poetic</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <table>
+            <caption>Another Table With THEAD</caption>
+            <thead>
+                <!-- scope is used when we want to differentiate elements -->
+                <th scope="colgroup">Item</th>
+                <th scope="colgroup">Classification</th>
+                <th scope="colgroup">Cost ($)</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Apple</td>
+                    <td>Fruits</td>
+                    <td>$1</td>
+                </tr>
+                <tr>
+                    <td>Gummy Bear</td>
+                    <td>Candy</td>
+                    <td>$2</td>
+                </tr>
+                <tr>
+                    <td>Spinach</td>
+                    <td>Veggie</td>
+                    <td>$6</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Total</strong></td>
+                    <td>$9</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    <a href="Links.html">Back To Table of Contents</a>
+</body>
+</html>

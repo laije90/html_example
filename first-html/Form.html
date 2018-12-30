@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Example</title>
+</head>
+<body>
+    <header class="example-form-header">
+        <h1>Example Form</h1>
+        <p>This is an example form</p>
+    </header>
+    <!--action is the webserver url or where the form data ends up
+    <form action='' method="GET" class='example-form'> -->
+    <form onsubmit="download(this[full-name].value"
+        <div class="form-row">
+            <label for="name-label">Name</label>
+            <input id="name-label" name='full-name' type='text' placeholder='this is a placeholder name'/>
+        </div>
+<!-- 
+        <div class="example-form">
+            <label for="food-type">Food Type</label>
+            <input id="food"
+                   name="food"
+                   type="food"
+                   placeholder="Not Food"/> -->
+
+        <fieldset class="food-row">
+            <legend>Type of food</legend>
+            <!--radios must have the same name, thats how they know whats related-->
+            <!--value is what gets sent to the server-->
+            <input id="food-type-1"
+                   name="food-type"
+                   type="radio"
+                   value="Veggie"/>
+            <label for="food-type-1" class="radio-label">Veggie</label>
+            <input id="food-type-2"
+                   name="food-type"
+                   type="radio"
+                   value="Fruits"/>
+            <label for="food-type-2" class="radio-label">Fruits</label>
+            <input id="food-type-none"
+                   name="food-type"
+                   type="radio"
+                   value="None"
+                   checked/>
+            <!--Sets a default-->
+            <label for="food-type-none" class="radio-label">None</label>
+        </fieldset>
+        </div>
+
+        <div class="form-row">
+            <!--
+            <label for="food-type-drop">Veggie Type</label>
+            if we didn't want to use the optgroup we'd use the above
+
+            optgroup lets us group the labels under an umbrella name
+            -->
+            <p>This is a drop down
+                <select id="food-type-drop" name='veggie-type-drop'>
+                    <optgroup label="veggie">
+                        <option value="artichoke">Artichoke</option>
+                        <option value="asparagus">Asparagus</option>
+                    </optgroup>
+                    <optgroup label="fruits">
+                        <option value="apples">Apples</option>
+                        <option value="oranges">Oranges</option>
+                    </optgroup>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+        </div>
+
+        <div class="form-row">
+            <label for='abstract'>If Other Veggie</label>
+            <textarea id="abstract" name="abstract" placeholder="Type here"></textarea>
+            <div class="Other">What kind of veggie is it?</div>
+        </div>
+
+        <div class="form-row">
+            <label class="checkbox-label" for='have-veggie'>
+                <input id='have-veggie'    
+                       name='have-veggie'
+                       type='checkbox'
+                       value='have-veggie'/>
+                <span>Have Veggie</span>
+            </label>
+            <label class="checkbox-label" for='have-veggie'>
+                <input id='no-veggie'
+                       name='have-veggie'
+                       type='checkbox'
+                       value='no-veggie'/>
+                <span>No Veggies</span>
+            </label>
+        </div>
+
+        <p>
+            <button type="submit">Submit Form</button>
+            <button type="reset">Reset Form</button>
+        </p>
+
+        <div>
+            <label for="fill-fruit">What fruit?</label>
+                <input type="text" name="some-fruit" id="some-fruit"
+        </div>
+    </form>
+    <br/>
+    <a href="Links.html">Back To Table of Contents</a>
+</body>
+<script language="Javascript">
+    function download(text) {
+        var pom = document.createElement('a');
+        pom.setAttribute('href', 'data:text/plain;charset=utf-8'+
+        encodeURIComponent(text));
+        pom.setAttribute('download', formData.txt);
+
+        pom.style.display = 'none';
+        document.body.appendChild(pom);
+
+        pom.click();
+        document.body.removeChild(pom);
+    }
+</script>
+</html>
